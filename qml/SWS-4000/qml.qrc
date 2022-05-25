@@ -1,0 +1,32 @@
+<RCC>
+    <qresource lang="root" prefix="/">
+        <file>main.qml</file>
+        <file>interface/StartInterface.qml</file>
+        <file>interface/detect/Detect.qml</file>
+        <file>interface/correct/Correct.qml</file>
+        <file>interface/systemselfcheck/SystemSelfCheck.qml</file>
+        <file>interface/public_use/AlarmInfoPop_Up.qml</file>
+        <file>interface/public_use/Top_toolBar.qml</file>
+        <file>interface/public_use/Bottom_toolBar.qml</file>
+        <file>interface/public_use/SystemSelfCheckItem.qml</file>
+        <file>common/Common.qml</file>
+        <file>common/SystemAlaemCodes.qml</file>
+        <file>interface/public_use/AlarmSwitch.qml</file>
+        <file>interface/public_use/AlarmOnOffPage.qml</file>
+        <file>interface/public_use/AlarmLimitPage.qml</file>
+        <file>interface/public_use/AlarmList.qml</file>
+        <file>interface/public_use/Realinfo.qml</file>
+        <file>interface/public_use/Parameter.qml</file>
+        <file>interface/public_use/SystemParamerter.qml</file>
+        <file>interface/schema/Schema.qml</file>
+        <file>interface/public_use/BloodControl.qml</file>
+        <file>interface/Custom_model/CustomButton.qml</file>
+        <file>interface/public_use/IntelligentKeyboard.qml</file>
+        <file>interface/public_use/SqliteSet.js</file>
+        <file>interface/public_use/Screensaver.qml</file>
+        <file>interface/public_use/AlarmClock.qml</file>
+        <file>interface/Custom_model/CustomSwitch.qml</file>
+        <file>interface/Custom_model/CustomSlider.qml</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>image/boot-logo-sws.png</file>
+        <file>image/background.png</file>
+        <file>image/selfCheck_refresh.png</file>
+        <file>image/theblu.png</file>
+        <file>image/clock_off.png</file>
+        <file>image/clock_on.png</file>
+        <file>image/bubble.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

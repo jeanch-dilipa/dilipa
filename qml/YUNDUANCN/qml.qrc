@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TopMain.qml</file>
+        <file>MeddleMain.qml</file>
+        <file>BottomMain.qml</file>
+        <file>LeftMain.qml</file>
+        <file>All_application.qml</file>
+        <file>Show_application.qml</file>
+    </qresource>
+</RCC>
