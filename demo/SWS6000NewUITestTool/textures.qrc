@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Widget/RightButton/RightButtonPress.png</file>
+        <file>Images/Widget/RightButton/RightButtonControlPress.png</file>
+        <file>Images/Widget/RightButton/RightButtonControl.png</file>
+        <file>Images/Widget/RightButton/RightButton.png</file>
+        <file>Images/Widget/RightButton/HeparinPumpControlWidgetBg.png</file>
+        <file>Images/Widget/RightButton/HeatControlWidgetBg.png</file>
+        <file>Images/Widget/RightButton/BloodPumpControlWidgetBg.png</file>
+        <file>Images/StartUp/Logo.png</file>
+        <file>Images/StartUp/Background.jpg</file>
+        <file>Images/Widget/NavigationBar/RunPress.png</file>
+        <file>Images/Widget/NavigationBar/Run.png</file>
+        <file>Images/Widget/NavigationBar/NextPress.png</file>
+        <file>Images/Widget/NavigationBar/Next.png</file>
+        <file>Images/Widget/InputKeyboard/KeySignPressed.png</file>
+        <file>Images/Widget/InputKeyboard/KeySignDisabled.png</file>
+        <file>Images/Widget/InputKeyboard/KeySign.png</file>
+        <file>Images/Widget/InputKeyboard/KeyPressed.png</file>
+        <file>Images/Widget/InputKeyboard/KeyEnterPressed.png</file>
+        <file>Images/Widget/InputKeyboard/KeyEnterDisabled.png</file>
+        <file>Images/Widget/InputKeyboard/KeyEnter.png</file>
+        <file>Images/Widget/InputKeyboard/KeyBackSpacePressed.png</file>
+        <file>Images/Widget/InputKeyboard/KeyBackSpace.png</file>
+        <file>Images/Widget/InputKeyboard/Key.png</file>
+    </qresource>
+</RCC>

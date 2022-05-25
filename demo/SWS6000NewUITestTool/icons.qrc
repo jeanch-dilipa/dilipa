@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/icons8_video_playlist_96px.png</file>
+        <file>icons/icons8_usb_2_96px_1.png</file>
+        <file>icons/icons8_downloads_96px.png</file>
+        <file>icons/icons8-right-96.png</file>
+        <file>icons/icons8-left-96.png</file>
+        <file>icons/icons8_exit_96px_3.png</file>
+        <file>icons/icons8_shutdown_96px.png</file>
+        <file>icons/icons8_restart_96px.png</file>
+        <file>icons/icons8_hierarchy_96px.png</file>
+        <file>icons/icons8_multiply_120px.png</file>
+    </qresource>
+</RCC>
