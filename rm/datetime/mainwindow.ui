@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="0">
+       <widget class="QDateTimeEdit" name="dateTimeEdit"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="show">
+        <property name="text">
+         <string>show</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="7">
+       <widget class="QCalendarWidget" name="calendarWidget"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLineEdit" name="datetime"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QDateEdit" name="dateEdit"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QTimeEdit" name="timeEdit"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QTextEdit" name="display"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QPushButton" name="set">
+        <property name="text">
+         <string>set</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="start">
+         <property name="text">
+          <string>start</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="stop">
+         <property name="text">
+          <string>stop</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="show_2">
+         <property name="text">
+          <string>show</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="maximum">
+          <number>60</number>
+         </property>
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>521</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menudatetime">
+    <property name="title">
+     <string>datetime</string>
+    </property>
+   </widget>
+   <addaction name="menudatetime"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
