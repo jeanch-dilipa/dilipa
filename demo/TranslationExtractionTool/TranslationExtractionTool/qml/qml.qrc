@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ImportFileItem.qml</file>
+        <file>NormalButton.qml</file>
+        <file>ShowMessageDialog.qml</file>
+        <file>CustomTextField.qml</file>
+        <file>BinaryButton.qml</file>
+        <file>ShowFileDetailDialog.qml</file>
+        <file>NormalCheckBox.qml</file>
+    </qresource>
+</RCC>
