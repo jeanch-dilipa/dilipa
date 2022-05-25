@@ -1,0 +1,64 @@
+1、sws-4800.pro
+	添加：
+  QT + = core gui  testlib
+		  sEqual(QT_MAJOR_VERSION, 5) {
+			QT += testlib
+			} else { # if not Qt5
+			CONFIG += qtestlib
+			}
+
+2、mian()
+
+	int main_ex(int argc, char *argv[])
+	{
+		//a.???
+    //return a.exec();
+	}
+
+
+
+3、对应的类
+#include <QtTest/QTest>
+#include <QtTest/qtestcase.h>
+
+extern int main_ex(int argc, char *argv[]);
+
+void CureInterface::Test_case()为私有槽函数需要重定义，并把其他私有槽函数屏蔽
+{
+    QFETCH(bool,firstSubPumpOpen_in);
+    QFETCH(CureModel,myCureModel_in);
+    QFETCH(bool,click_in);
+    QFETCH(bool,fuildPrimeEnalbe_out);
+    QFETCH(bool,firstSubPumpOpen_out);
+
+    g_data.firstSubPumpOpen = firstSubPumpOpen_in;
+    g_data.fuildPrimeEnalbe = false;
+    ModelSelect::myCureModel = myCureModel_in;
+
+    SLOTFuildPrimeDialogClose(click_in);
+
+    QCOMPARE((int)g_data.fuildPrimeEnalbe,(int)fuildPrimeEnalbe_out);
+    QCOMPARE((int)g_data.firstSubPumpOpen,(int)firstSubPumpOpen_out);
+}
+void CureInterface::Test_case_data()
+{
+    QTest::addColumn<bool>("firstSubPumpOpen_in");
+    QTest::addColumn<CureModel>("myCureModel_in");
+    QTest::addColumn<bool>("click_in");
+    QTest::addColumn<bool>("fuildPrimeEnalbe_out");
+    QTest::addColumn<bool>("firstSubPumpOpen_out");
+    QTest::newRow("case1")<<true<<CURE_PREPARE<<true<<true<<false;
+    QTest::newRow("case2")<<false<<CURE_PREPARE<<false<<false<<false;
+    QTest::newRow("case3")<<true<<CURE_PRIME<<true<<true<<false;
+    QTest::newRow("case4")<<false<<CURE_PRIME<<false<<false<<false;
+}
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_AttributeCount,true);
+    main_ex(argc, argv);
+    CureInterface tc;
+
+    return QTest::qExec(&tc, argc, argv);
+}

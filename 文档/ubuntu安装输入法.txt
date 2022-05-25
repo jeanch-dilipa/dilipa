@@ -1,0 +1,129 @@
+6   安装搜狗输入法
+site:	https://pinyin.sogou.com/linux/
+file:	sogoupinyin_2.3.1.0112_amd64.deb
+md5:	D932DE9801A45A07785C6A840A8ECDCA
+sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
+遇到有错误，不急：
+sudo apt-get install -f
+报错
+修改源：
+
+ sudo vim /etc/apt/sources.list 
+官方源：
+
+deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+deb-src http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+
+deb-src http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb-src http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb-src http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+
+163源：
+
+deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+
+deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+阿里源：
+
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+centos源（放心使用）：
+
+deb http://centos.bitcomm.cn/ubuntu trusty main restricted universe multiverse
+
+deb http://centos.bitcomm.cn/ubuntu trusty-security main restricted universe multiverse
+
+deb http://centos.bitcomm.cn/ubuntu trusty-updates main restricted universe multiverse
+
+deb http://centos.bitcomm.cn/ubuntu trusty-backports main restricted universe multiverse
+
+deb http://centos.bitcomm.cn/ubuntu trusty-proposed main restricted universe multiverse
+
+deb-src http://centos.bitcomm.cn/ubuntu trusty main restricted universe multiverse
+
+deb-src http://centos.bitcomm.cn/ubuntu trusty-security main restricted universe multiverse
+
+deb-src http://centos.bitcomm.cn/ubuntu trusty-updates main restricted universe multiverse
+
+deb-src http://centos.bitcomm.cn/ubuntu trusty-backports main restricted universe multiverse
+
+deb-src http://centos.bitcomm.cn/ubuntu trusty-proposed main restricted universe multiverse
+
+搜狐源：
+
+deb http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
+
+deb http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+deb-src http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
+
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
+
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
+————————————————
+执行：
+
+sudo apt-get update
+
+再执行：
+sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+系统设置 => 语言支持 => 键盘输入法系统 => fcitx；
+重启。

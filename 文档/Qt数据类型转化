@@ -1,0 +1,65 @@
+int  转 QString
+int m=1;
+QString b;
+b=QString::number(m)
+
+QString 转int
+QString a="1111"
+int b;
+b=a.toInt（）
+
+char 转换为 QString
+char a='b';
+QString str;
+str=QString(a);
+
+QString 转换为 char
+QString str="qq";
+char *ch;
+ch = str.toLatin1.data();
+
+char * 与 const char *的转换
+char *ch1="tt";
+const char *ch2="qq";
+ch2 = ch1;//不报错，但有警告
+ch1 = (char *)ch2;
+
+QByteArray 转换为 char *
+char *ch;//不要定义成ch[n];
+QByteArray byte;
+ch = byte.data();
+
+char * 转换为  QByteArray
+char *ch;
+QByteArray byte;
+byte = QByteArray(ch);
+
+QString 转换为  QByteArray
+QByteArray byte;
+QString string;
+byte = string.toAscii();
+
+QByteArray 转换为  QString
+QByteArray byte;
+QString string;
+string = QString(byte);
+示例：
+qDebug()<<"qq";
+qDebug()<<tr("tt");
+qDebug()<<ch;(ch 为char类型)
+qDebug()<<tr(ch);
+qDebug()<<byteArray;(byteArray是QByteArray类型)
+qDebug()<<tr(byteArray);
+qDebug()<<str;(str 为Qstring类型)
+但是qDebug()<<tr(str);是不可以的，要想用tr()函数输出QString类型的字符则要如下：
+qDebug()<<tr(str.toLatin1);
+QString string
+QString s2q(const string &s)
+{
+return QString(QString::fromLocal8Bit(s.c_str()));
+}
+
+string q2s(const QString &s)
+{
+return string((const char *)s.toLocal8Bit());
+}

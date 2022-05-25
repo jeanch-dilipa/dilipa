@@ -1,0 +1,260 @@
+1、sws-4800.pro
+	添加：QT + = core gui  testlib
+		  sEqual(QT_MAJOR_VERSION, 5) {
+			QT += testlib
+			} else { # if not Qt5
+			CONFIG += qtestlib
+			}
+QT + = core gui  testlib
+		  sEqual(QT_MAJOR_VERSION, 5) {
+			QT += testlib
+			} else { # if not Qt5
+			CONFIG += qtestlib
+			}			
+
+2、mian()
+	#include <QtGui/QApplication>
+	#include <QTextCodec>
+	#include <QMetaType>
+	#include <stdio.h>
+	#include <QWSServer>
+	#include <QWindowsStyle>
+
+	#include "rootparentwidget.h"
+	#include "common.h"
+
+	void customMessageHandler(QtMsgType type, const char *msg)
+	{
+		QString info = QString("");
+
+		switch (type)
+		{
+			case QtDebugMsg:
+				info = QString("Debug: %1").arg(msg);
+				break;
+
+			case QtWarningMsg:
+				info = QString("Warning: %1").arg(msg);
+				break;
+
+			case QtCriticalMsg:
+				info = QString("Critical: %1").arg(msg);
+				break;
+
+			case QtFatalMsg:
+				info = QString("Fatal: %1").arg(msg);
+				break;
+
+			default:
+				break;
+		}
+
+	#ifdef  SYSTEM_LOG_RECORD
+		QDir syslogDir;
+		if(!syslogDir.exists(QString(SYSTEM_LOG_DIR)))
+			syslogDir.mkpath(QString(SYSTEM_LOG_DIR));
+
+		QString date = QDateTime::currentDateTime().toString("yyyy-MM-dd");
+		QString syslogName = QString("%1%2%3%4")\
+				.arg(QString(SYSTEM_LOG_DIR))\
+				.arg(QString("/"))\
+				.arg(QString(SYSTEM_LOG_NAME_PREFIX))\
+				.arg(date);
+
+
+		QFile out(syslogName);
+		if(!out.isOpen())
+		{
+			out.open(QIODevice::WriteOnly | QIODevice::Append);
+			QTextStream ts(&out);
+			ts << info << endl;
+			out.flush();
+			out.close();
+		}
+
+		if(type == QtFatalMsg)
+			abort();
+	#else
+		QTextStream ts(stdout, QIODevice::WriteOnly);
+		ts << info << endl;
+	#endif
+	}
+
+	#if 1
+	int main_ex(int argc, char *argv[])
+	{
+		QApplication a(argc, argv);
+		a.setStyle(new QWindowsStyle);
+		qInstallMsgHandler(customMessageHandler);
+
+		//设置程序使用utf8编码格式
+		QTextCodec *codec=QTextCodec::codecForName("UTF-8");
+		QTextCodec::setCodecForCStrings(codec);
+		QTextCodec::setCodecForLocale(codec);
+		QTextCodec::setCodecForTr(codec);
+
+		QFile interfaceQss(":/new/prefix1/interface/Stylesheet3.qss");
+		interfaceQss.open(QFile::ReadOnly);
+		a.setStyleSheet(interfaceQss.readAll());
+		interfaceQss.close();
+
+	//    系统默认加载语言文件
+		QTranslator appTranslator;
+		if(g_data.system.language != System::LANGUAGE_CHINESE)
+		{
+			switch(g_data.system.language)
+			{
+			case System::LANGUAGE_ENLISH :
+				appTranslator.load("sws-4800_English",LANGUAGEPATH);
+				break;
+			case System::LANGUAGE_SPANISH :
+				appTranslator.load("sws-4800_Spanish",LANGUAGEPATH);
+				break;
+			case System::LANGUAGE_FRENCH :
+				appTranslator.load("sws-4800_French",LANGUAGEPATH);
+				break;
+			default :
+				break;
+			}
+			a.installTranslator(&appTranslator);
+		}
+
+		//向Qt注册自定义的数据格式，用于信号和槽
+		qRegisterMetaType<QVector<QByteArray> >("QVector<QByteArray>");
+		qRegisterMetaType<DataAttributeType>("DataAttributeType");
+		qRegisterMetaType<InterfaceWidgetType>("InterfaceWidgetType");
+		qRegisterMetaType<SystemSelfCheckItemType>("SystemSelfCheckItemType");
+		qRegisterMetaType<SystemSelfCheckResultStatusType>("SystemSelfCheckResultStatusType");
+		qRegisterMetaType<CADWorkModelType>("CADWorkModelType");
+		qRegisterMetaType<CADCurrentStepType>("CADCurrentStepType");
+		qRegisterMetaType<SystemAlarmEnableFlagType>("SystemAlarmEnableFlagType");
+
+		//创建界面管理类
+		RootParentWidget rootWidget(NULL);
+
+		rootWidget.setWindowFlags(Qt::FramelessWindowHint);
+	//    rootWidget.setAttribute(Qt::WA_TranslucentBackground , true);
+		rootWidget.setWindowOpacity(1);
+
+		rootWidget.resize(1024 , 768);
+		rootWidget.show();
+
+	}
+
+	#else
+	int main(int argc, char *argv[])
+	{
+		QApplication a(argc, argv);
+		a.setStyle(new QWindowsStyle);
+		qInstallMsgHandler(customMessageHandler);
+
+		//隐藏鼠标指针/去掉绿色背景
+		//QWSServer::setCursorVisible(false);
+	//    QColor color(0,0,0,0);
+	//    QBrush brush(color,Qt::SolidPattern);
+	//    QWSServer::setBackground(brush);
+
+		//设置程序使用utf8编码格式
+		QTextCodec *codec=QTextCodec::codecForName("UTF-8");
+		QTextCodec::setCodecForCStrings(codec);
+		QTextCodec::setCodecForLocale(codec);
+		QTextCodec::setCodecForTr(codec);
+
+		QFile interfaceQss(":/new/prefix1/interface/Stylesheet3.qss");
+		interfaceQss.open(QFile::ReadOnly);
+		a.setStyleSheet(interfaceQss.readAll());
+		interfaceQss.close();
+
+	//    系统默认加载语言文件
+		QTranslator appTranslator;
+		if(g_data.system.language != System::LANGUAGE_CHINESE)
+		{
+			switch(g_data.system.language)
+			{
+			case System::LANGUAGE_ENLISH :
+				appTranslator.load("sws-4800_English",LANGUAGEPATH);
+				break;
+			case System::LANGUAGE_SPANISH :
+				appTranslator.load("sws-4800_Spanish",LANGUAGEPATH);
+				break;
+			case System::LANGUAGE_FRENCH :
+				appTranslator.load("sws-4800_French",LANGUAGEPATH);
+				break;
+			default :
+				break;
+			}
+			a.installTranslator(&appTranslator);
+		}
+
+		//向Qt注册自定义的数据格式，用于信号和槽
+		qRegisterMetaType<QVector<QByteArray> >("QVector<QByteArray>");
+		qRegisterMetaType<DataAttributeType>("DataAttributeType");
+		qRegisterMetaType<InterfaceWidgetType>("InterfaceWidgetType");
+		qRegisterMetaType<SystemSelfCheckItemType>("SystemSelfCheckItemType");
+		qRegisterMetaType<SystemSelfCheckResultStatusType>("SystemSelfCheckResultStatusType");
+		qRegisterMetaType<CADWorkModelType>("CADWorkModelType");
+		qRegisterMetaType<CADCurrentStepType>("CADCurrentStepType");
+		qRegisterMetaType<SystemAlarmEnableFlagType>("SystemAlarmEnableFlagType");
+
+		//创建界面管理类
+		RootParentWidget rootWidget(NULL);
+
+		rootWidget.setWindowFlags(Qt::FramelessWindowHint);
+	//    rootWidget.setAttribute(Qt::WA_TranslucentBackground , true);
+		rootWidget.setWindowOpacity(1);
+
+		rootWidget.resize(1024 , 768);
+		rootWidget.show();
+
+	//    qDebug()<<"main ID"<<QThread::currentThreadId();
+
+		return a.exec();
+	}
+	#endif
+
+
+
+
+
+
+
+
+3、对应的类
+	#if 1
+	#include <QtTest/QTest>
+	#include <QtTest/qtestcase.h>
+	//QTEST_MAIN(AlarmApparatus)
+	extern int main_ex(int argc, char *argv[]);
+
+	void CleanAndDisinfectInterface::Test_case_1()//Test_case_1()为私有槽函数需要重定义，并把其他私有槽函数屏蔽
+	{
+		SLOTReDoCADItem();//需要测试的函数
+		QVERIFY(m_resultValue);
+		QVERIFY2(m_resultValue,"11111");
+		QCOMPARE(m_resultValue, 1);//m_resultValue为int
+	}
+	void CleanAndDisinfectInterface::Test_case_2()
+	{
+		
+	}
+
+	void CleanAndDisinfectInterface::Test_case_3()
+	{
+	}
+
+	void CleanAndDisinfectInterface::Test_case_4()
+	{
+
+	}
+
+	int main(int argc, char *argv[])
+	{
+		QApplication app(argc, argv);
+		app.setAttribute(Qt::AA_AttributeCount,true);
+		main_ex(argc, argv);
+		CleanAndDisinfectInterface tc;
+
+		//return QTest::qExec(&tc);
+		return QTest::qExec(&tc, argc, argv);
+	}
+	#endif

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>interface/resource/startinterface/startInterface.jpg</file>
+        <file>interface/resource/maininterface/back.png</file>
+        <file>interface/resource/maininterface/user.png</file>
+        <file>interface/resource/maininterface/minus.png</file>
+        <file>interface/resource/maininterface/add.png</file>
+        <file>interface/resource/maininterface/gear.png</file>
+        <file>interface/resource/maininterface/ongear.png</file>
+    </qresource>
+</RCC>

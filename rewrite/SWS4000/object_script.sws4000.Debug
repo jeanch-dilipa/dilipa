@@ -1,0 +1,17 @@
+debug/publicdata.o
+debug/datadeal.o
+debug/startinterface.o
+debug/systemmanager.o
+debug/main.o
+debug/network.o
+debug/crc.o
+debug/uart485.o
+debug/uart.o
+debug/qrc_Resource.o
+debug/moc_publicdata.o
+debug/moc_datadeal.o
+debug/moc_startinterface.o
+debug/moc_systemmanager.o
+debug/moc_network.o
+debug/moc_uart485.o
+debug/moc_uart.o

@@ -1,0 +1,108 @@
+一、from c to c++:
+gcc ->.c	gcc -lstdc++=g++ ->.cpp		gcj ->java	gccgo ->Go
+cin>>		cout<<""<<endl	cout 和 cin 都是 C++ 的内置对象，而不是关键字
+new 和 delete 分配内存
+内联函数inline
+默认参数的连续性是保证正确传参的前提:一旦为某个形参指定了默认值，那么它后面的所有形参都必须有默认值
+函数的重载的规则：重载决议（Overload Resolution）
+	函数名称必须相同。
+	参数列表必须不同（个数不同、类型不同、参数排列顺序不同等）。
+	函数的返回类型可以相同也可以不相同。
+	仅仅返回类型不同不足以成为函数的重载。
+二、class and object
+类体内部定义的函数默认就是内联函数
+成员变量大都以m_开头，这是约定成俗的写法
+采用初始化列表
+Student::Student(char *name, int age, float score): m_name(name), m_age(age), m_score(score){}
+const 修饰，只能使用初始化列表的方式赋值
+delete 删除时才会调用析构函数
+static 成员变量属于类,在类声明的外部初始化
+const 在前表示返回值是 const 类型，在后表示常成员函数，只能读取成员变量的值，而不能修改成员变量的值
+友元的关系是单向、不传递
+C++中的 struct 和 class 基本是通用的，唯有几个细节不同：
+	使用 class 时，类中的成员默认都是 private 属性的；而使用 struct 时，结构体中的成员默认都是 public 属性的。
+	class 继承默认是 private 继承，而 struct 继承默认是 public 继承。
+	class 可以使用模板，而 struct 不能。
+insert (size_t pos, const string& str);插入
+erase (size_t pos = 0, size_t len = npos);删除
+substr (size_t pos = 0, size_t len = npos);提取
+find (const string& str, size_t pos = 0);查找
+Student(const Student &stu);  //拷贝构造函数（声明）
+
+三、c++ reference
+基本类型、聚合类型
+四、inheritance and derive
+public继承方式
+基类中所有 public 成员在派生类中为 public 属性；
+基类中所有 protected 成员在派生类中为 protected 属性；
+基类中所有 private 成员在派生类中不能使用。
+protected继承方式
+基类中的所有 public 成员在派生类中为 protected 属性；
+基类中的所有 protected 成员在派生类中为 protected 属性；
+基类中的所有 private 成员在派生类中不能使用。
+private继承方式
+基类中的所有 public 成员在派生类中均为 private 属性；
+基类中的所有 protected 成员在派生类中均为 private 属性；
+基类中的所有 private 成员在派生类中不能使用。
+虚继承virtual：被共享的基类就称为虚基类，在派生类中都只包含一份虚基类的成员
+向上转型
+五、polymorphism和virtual function
+虚函数，基类指针指向基类对象时就使用基类的成员（包括成员函数和成员变量），指向派生类对象时就使用派生类的成员。换句话说，基类指针可以按照基类的方式来做事，也可以按照派生类的方式来做事，它有多种形态，或者说有多种表现方式
+typeid 
+运算符用来获取一个表达式的类型信息，类型信息保存到一个 type_info 类型的对象里面
+typeid( dataType )
+typeid( expression )
+name() 用来返回类型的名称。
+raw_name() 用来返回名字编码（Name Mangling）算法产生的新名称。
+hash_code() 用来返回当前类型对应的 hash 值。
+六、Operator Overloading
+重载后运算符的含义应该符合原有用法习惯。例如重载+运算符，完成的功能就应该类似于做加法，在重载的+运算符中做减法是不合适的。此外，重载应尽量保留运算符原有的特性。
+C++ 规定，运算符重载不改变运算符的优先级。
+以下运算符不能被重载：.、.*、::、? :、sizeof。
+重载运算符()、[]、->、或者赋值运算符=时，只能将它们重载为成员函数，不能重载为全局函数。
+运算符重载的实质是将运算符重载为一个函数，使用运算符的表达式就被解释为对重载函数的调用。
+运算符可以重载为全局函数。此时函数的参数个数就是运算符的操作数个数，运算符的操作数就成为函数的实参。
+运算符也可以重载为成员函数。此时函数的参数个数就是运算符的操作数个数减一，运算符的操作数有一个成为函数作用的对象，其余的成为函数的实参。
+必要时需要重载赋值运算符=，以避免两个对象内部的指针指向同一片存储空间。
+运算符可以重载为全局函数，然后声明为类的友元。
+<<和>>是在 iostream 中被重载，才成为所谓的“流插入运算符”和“流提取运算符”的。
+类型的名字可以作为强制类型转换运算符，也可以被重载为类的成员函数。它能使得对象被自动转换为某种类型。
+自增、自减运算符各有两种重载方式，用于区别前置用法和后置用法。
+运算符重载不改变运算符的优先级。重载运算符时，应该尽量保留运算符原本的特性。
+七、Template（function、Class）
+template<typename T> void Swap(T *a, T *b)
+{
+    T temp = *a;
+    *a = *b;
+    *b = temp;
+}
+八、Exception
+多级 catch 时匹配异常类型时发生向上转型
+九、I/O
+cin cout cerr clog
+cin
+getline(str,n,ch)	 从输入流中接收 n-1 个字符给 str 变量，当遇到指定 ch 字符时会停止读取，默认情况下 ch 为 '\0'。
+get()	   	   		 从输入流中读取一个字符，同时该字符会从输入流中消失。
+gcount() 			 返回上次从输入流提取出的字符个数，该函数常和 get()、getline()、ignore()、peek()、read()、readsome()、putback() 和 unget() 联用。
+peek()	 			 返回输入流中的第一个字符，但并不是提取该字符。
+putback(c) 			 将字符 c 置入输入流（缓冲区）。
+ignore(n,ch)		 从输入流中逐个提取字符，但提取出的字符被忽略，不被使用，直至提取出 n 个字符，或者当前读取的字符为 ch。
+operator>>			 重载 >> 运算符，用于读取指定类型的数据，并返回输入流对象本身。
+cout
+put()	输出单个字符。
+write()	输出指定的字符串。
+tellp()	用于获取当前输出流指针的位置。
+seekp()	设置输出流指针的位置。
+flush()	刷新输出流缓冲区。
+operator<<	重载 << 运算符，使其用于输出其后指定类型的数据。
+十、file
+ios::in	ifstream fstream	打开文件用于读取数据。如果文件不存在，则打开出错。
+ios::out	ofstream fstream	打开文件用于写入数据。如果文件不存在，则新建该文件；如果文件原来就存在，则打开时清除原来的内容。
+ios::app	ofstream fstream	打开文件，用于在其尾部添加数据。如果文件不存在，则新建该文件。
+ios::ate	ifstream	打开一个已有的文件，并将文件读指针指向文件末尾（读写指 的概念后面解释）。如果文件不存在，则打开出错。
+ios:: trunc	ofstream	打开文件时会清空内部存储的所有数据，单独使用时与 ios::out 相同。
+ios::binary	ifstream ofstream
+fstream	以二进制方式打开文件。若不指定此模式，则以文本模式打开。
+ios::in | ios::out	fstream	打开已存在的文件，既可读取其内容，也可向其写入数据。文件刚打开时，原有内容保持不变。如果文件不存在，则打开出错。
+ios::in | ios::out	ofstream	打开已存在的文件，可以向其写入数据。文件刚打开时，原有内容保持不变。如果文件不存在，则打开出错。
+ios::in | ios::out | ios::trunc	fstream	打开文件，既可读取其内容，也可向其写入数据。如果文件本来就存在，则打开时清除原来的内容；如果文件不存在，则新建该文件。

@@ -1,0 +1,17 @@
+release/publicdata.o
+release/datadeal.o
+release/startinterface.o
+release/systemmanager.o
+release/main.o
+release/network.o
+release/crc.o
+release/uart485.o
+release/uart.o
+release/qrc_Resource.o
+release/moc_publicdata.o
+release/moc_datadeal.o
+release/moc_startinterface.o
+release/moc_systemmanager.o
+release/moc_network.o
+release/moc_uart485.o
+release/moc_uart.o
