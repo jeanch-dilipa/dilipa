@@ -1,0 +1,20 @@
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\bin\Release\SWS-RFID.exe.config
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\bin\Release\SWS-RFID.exe
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\bin\Release\SWS-RFID.pdb
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\ResolveAssemblyReference.cache
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS_RFID.Form1.resources
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS_RFID.Properties.Resources.resources
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\GenerateResource.read.1.tlog
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\GenerateResource.write.1.tlog
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS-RFID.exe
+E:\kuaipan\swsrfid20150123\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS-RFID.pdb
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\bin\Release\SWS-RFID.exe.config
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\bin\Release\SWS-RFID.exe
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\bin\Release\SWS-RFID.pdb
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS_RFID.Form1.resources
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS_RFID.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS-RFID.exe
+C:\Documents and Settings\Administrator\桌面\swsrfid20150126\上位机\SWS-RFID\SWS-RFID\obj\x86\Release\SWS-RFID.pdb
