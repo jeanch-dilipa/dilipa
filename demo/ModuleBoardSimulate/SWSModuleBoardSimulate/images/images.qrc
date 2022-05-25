@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>closeICO.png</file>
+        <file>closeICO_hover.png</file>
+        <file>closeICO_pressed.png</file>
+        <file>minimizeICO.png</file>
+        <file>minimizeICO_hover.png</file>
+        <file>minimizeICO_pressed.png</file>
+        <file>comboBox_arrowBottom.png</file>
+        <file>comboBox_arrowBottom_disabled.png</file>
+        <file>appicon.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>980</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font-size: 16px;
+	font-family: Microsoft YaHei;
+}
+
+QComboBox {
+    border-radius: 4px;
+    border: 1px solid rgb(111, 156, 207);
+    background: white;
+}
+QComboBox:!enabled {
+    color: rgb(80, 80, 80);
+}
+QComboBox::drop-down {
+    width: 20px;
+    border: none;
+    background: transparent;
+}
+QComboBox::down-arrow {
+	height: 25px;
+	image: url(:/comboBox_arrowBottom.png);
+}
+QComboBox::down-arrow:disabled{
+	height: 25px;
+	image: url(:/comboBox_arrowBottom_disabled.png);
+}
+QComboBox::down-arrow:on {
+    top: 1px;
+}
+QComboBox QAbstractItemView {
+    border: 1px solid rgb(111, 156, 207);
+    background: white;
+    outline: none;
+}
+QComboBox QAbstractItemView::item {
+    height: 25px;
+}
+QComboBox QAbstractItemView::item:selected {
+    background: rgb(232, 241, 250);
+    color: rgb(2, 65, 132);
+}
+QLineEdit{
+	border: 1px solid rgb(45, 151, 255);
+	border-radius: 4px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">#centralWidget{
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(51, 255, 204, 100), stop:1 rgba(30, 144, 255, 200));
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="topWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-size: 20px;
+	color: rgba(0, 118, 201, 255);
+	font-weight: 600;
+}</string>
+         </property>
+         <property name="text">
+          <string>智能血透仿真系统</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="versionLabel">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-size: 20px;
+	color: rgba(0, 118, 201, 255);
+	font-weight: 600;
+}</string>
+         </property>
+         <property name="text">
+          <string>  V1.0  </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="CustomLinkLabel" name="connectStateLabel">
+         <property name="text">
+          <string>未连接</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="CustomLinkLabel" name="machineType">
+         <property name="text">
+          <string>未检测到机型</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>300</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="menuBtn">
+         <property name="minimumSize">
+          <size>
+           <width>27</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>27</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	font-size: 20px;
+	font-weight: 600;
+	border: 4px solid rgb(0, 163, 237);
+	border-radius: 7px;
+	color: rgb(0, 153, 227);
+}
+QPushButton:hover{
+	border: 4px solid rgb(0, 181, 255);
+	color: rgb(0, 171, 245);
+}
+QPushButton:pressed{
+	border: 4px solid rgb(0, 145, 219);
+	color: rgb(0, 135, 209);
+}
+QPushButton:checked{
+	border: 4px solid rgb(0, 145, 219);
+	color: rgb(0, 135, 209);
+}
+QPushButton:disabled{
+	border: 4px solid rgb(200, 200, 200);
+    color: rgb(180, 180, 180);
+}</string>
+         </property>
+         <property name="text">
+          <string>≡</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="minimizeBtn">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border-image:url(:/minimizeICO.png);} 
+QPushButton:hover{border-image:url(:/minimizeICO_hover.png);}
+QPushButton:pressed{border-image:url(:/minimizeICO_pressed.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="closeBtn">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{border-image:url(:/closeICO.png);} 
+QPushButton:hover{border-image:url(:/closeICO_hover.png);}
+QPushButton:pressed{border-image:url(:/closeICO_pressed.png);}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="mainTabWidget">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+        border: none;
+        border-top: 2px solid rgb(0, 118, 201);
+        /*background: rgb(224, 238, 255);*/
+}
+QTabBar::tab {
+        border: none;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        color: white;
+        background: rgb(91, 190, 247);
+        height: 34px;
+        min-width: 105px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+}
+QTabBar::tab:hover {
+        background: rgb(71, 170, 227);
+}
+QTabBar::tab:selected {
+        color: white;
+        background: rgb(0, 118, 201);
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="BloodSystemInterface" name="bloodSystemTab">
+       <attribute name="title">
+        <string>血路系统</string>
+       </attribute>
+      </widget>
+      <widget class="LiquidSystemInterface" name="liquidSystemTab">
+       <attribute name="title">
+        <string>水路系统</string>
+       </attribute>
+      </widget>
+      <widget class="MixUltraSystemInterface" name="mixUltraSystemTab">
+       <attribute name="title">
+        <string>配液超滤系统</string>
+       </attribute>
+      </widget>
+      <widget class="AntiSystemInterface" name="antiSystemTab">
+       <attribute name="title">
+        <string>抗凝系统</string>
+       </attribute>
+      </widget>
+      <widget class="PowerSystemInterface" name="powerSystemTab">
+       <attribute name="title">
+        <string>电源系统</string>
+       </attribute>
+      </widget>
+      <widget class="keyLampInterface" name="keyLampTab">
+       <attribute name="title">
+        <string>按键指示灯</string>
+       </attribute>
+      </widget>
+      <widget class="BTVRCMInterface" name="BtvRCMTab">
+       <attribute name="title">
+        <string>BTV/RCM</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_33">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_31">
+        <property name="text">
+         <string>注：参数名称 &lt;span style=&quot; font-weight:600;&quot;&gt;黑色&lt;/span&gt;为4000/6000通用，&lt;font color='Brown'&gt;棕色&lt;/font&gt;为仅4000有效，&lt;font color='green'&gt;绿色&lt;/font&gt;为仅6000有效。</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CustomLinkLabel</class>
+   <extends>QLabel</extends>
+   <header>interface/commonItem/customlinklabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>BloodSystemInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/bloodsysteminterface.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LiquidSystemInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/liquidsysteminterface.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MixUltraSystemInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/mixultrasysteminterface.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AntiSystemInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/antisysteminterface.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PowerSystemInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/powersysteminterface.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>keyLampInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/keylampinterface.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BTVRCMInterface</class>
+   <extends>QWidget</extends>
+   <header>interface/centerInterface/btvrcminterface.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
