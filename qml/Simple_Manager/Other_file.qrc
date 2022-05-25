@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon.rc</file>
+        <file>Simple_manager.sql</file>
+        <file>Simple_Manger.db</file>
+    </qresource>
+</RCC>

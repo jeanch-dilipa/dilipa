@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>background.png</file>
+        <file>pinwheel.png</file>
+        <file>pole.png</file>
+    </qresource>
+</RCC>

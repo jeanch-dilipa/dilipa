@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>scroll.qml</file>
+        <file>callfun.js</file>
+        <file>Annulus.qml</file>
+        <file>Sender.qml</file>
+        <file>Windmill.qml</file>
+        <file>Custom_rectangle.qml</file>
+        <file>Animation.qml</file>
+        <file>Model.qml</file>
+        <file>Pathview.qml</file>
+        <file>Xmlmodel.qml</file>
+        <file>Canvas_Element.qml</file>
+        <file>Canvas_paint.qml</file>
+        <file>Particlesystem.qml</file>
+        <file>Particlegroup.qml</file>
+        <file>Epileather.qml</file>
+        <file>Curve.qml</file>
+    </qresource>
+</RCC>

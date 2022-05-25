@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/check.png</file>
+        <file>image/off.png</file>
+        <file>image/on.png</file>
+        <file>image/Simple_Manager.ico</file>
+        <file>image/Simple_Manager.png</file>
+        <file>image/uncheck.png</file>
+    </qresource>
+</RCC>

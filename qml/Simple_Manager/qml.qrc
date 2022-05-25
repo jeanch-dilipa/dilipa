@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Simple_Manger.qml</file>
+        <file>Region_TreeView.qml</file>
+        <file>SqliteSet.js</file>
+    </qresource>
+</RCC>
