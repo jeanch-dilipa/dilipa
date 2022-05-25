@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MDI</class>
+ <widget class="QMainWindow" name="MDI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>653</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MDI</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>653</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNEW">
+    <property name="title">
+     <string>NEW</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCLOSE">
+    <property name="title">
+     <string>CLOSE</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCUT">
+    <property name="title">
+     <string>CUT</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCOPY">
+    <property name="title">
+     <string>COPY</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTAG">
+    <property name="title">
+     <string>TAG</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEXIT">
+    <property name="title">
+     <string>EXIT</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOPEN">
+    <property name="title">
+     <string>OPEN</string>
+    </property>
+   </widget>
+   <addaction name="menuNEW"/>
+   <addaction name="menuCLOSE"/>
+   <addaction name="menuCUT"/>
+   <addaction name="menuCOPY"/>
+   <addaction name="menuTAG"/>
+   <addaction name="menuEXIT"/>
+   <addaction name="menuOPEN"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

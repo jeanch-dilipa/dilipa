@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>619</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Spreadsheet</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>621</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>619</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuaas">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionopen"/>
+    <addaction name="actionsave"/>
+    <addaction name="actionsave_as"/>
+    <addaction name="separator"/>
+    <addaction name="action1population"/>
+    <addaction name="action2report_2006_sp"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <widget class="QMenu" name="menuselect">
+     <property name="title">
+      <string>select</string>
+     </property>
+     <addaction name="actionrow"/>
+     <addaction name="actioncolumn"/>
+     <addaction name="actionall"/>
+    </widget>
+    <addaction name="actioncut"/>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpaste"/>
+    <addaction name="actiondelete"/>
+    <addaction name="menuselect"/>
+    <addaction name="separator"/>
+    <addaction name="actionfind"/>
+    <addaction name="actiongo_to_cell"/>
+   </widget>
+   <widget class="QMenu" name="menutools">
+    <property name="title">
+     <string>tools</string>
+    </property>
+    <addaction name="actionrecalculate"/>
+    <addaction name="actionsort"/>
+   </widget>
+   <widget class="QMenu" name="menuoptions">
+    <property name="title">
+     <string>options</string>
+    </property>
+    <addaction name="actionshow_grid"/>
+    <addaction name="actionauto_recalculate"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>help</string>
+    </property>
+    <addaction name="actionabout"/>
+    <addaction name="actionabout_qt"/>
+   </widget>
+   <addaction name="menuaas"/>
+   <addaction name="menuedit"/>
+   <addaction name="menutools"/>
+   <addaction name="menuoptions"/>
+   <addaction name="menuhelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_4"/>
+   <addaction name="action_5"/>
+   <addaction name="action_6"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionnew">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/images/test.bmp</normaloff>:/new/prefix1/images/test.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>new      CTRL+N</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open      CTRL+N</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+O</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>save      CTRL+S</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionsave_as">
+   <property name="text">
+    <string>save as</string>
+   </property>
+  </action>
+  <action name="action1population">
+   <property name="text">
+    <string>1population</string>
+   </property>
+  </action>
+  <action name="action2report_2006_sp">
+   <property name="text">
+    <string>2report 2006.sp</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actioncut">
+   <property name="text">
+    <string>cut</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="text">
+    <string>copy</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actiondelete">
+   <property name="text">
+    <string>delete</string>
+   </property>
+  </action>
+  <action name="actionfind">
+   <property name="text">
+    <string>find</string>
+   </property>
+  </action>
+  <action name="actiongo_to_cell">
+   <property name="text">
+    <string>go to cell</string>
+   </property>
+  </action>
+  <action name="actionrecalculate">
+   <property name="text">
+    <string>recalculate</string>
+   </property>
+  </action>
+  <action name="actionsort">
+   <property name="text">
+    <string>sort</string>
+   </property>
+  </action>
+  <action name="actionrow">
+   <property name="text">
+    <string>row</string>
+   </property>
+  </action>
+  <action name="actioncolumn">
+   <property name="text">
+    <string>column</string>
+   </property>
+  </action>
+  <action name="actionall">
+   <property name="text">
+    <string>all</string>
+   </property>
+  </action>
+  <action name="actionshow_grid">
+   <property name="text">
+    <string>show grid</string>
+   </property>
+  </action>
+  <action name="actionauto_recalculate">
+   <property name="text">
+    <string>auto-recalculate</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+  <action name="actionabout_qt">
+   <property name="text">
+    <string>about qt</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>新建</string>
+   </property>
+   <property name="toolTip">
+    <string>新建文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
