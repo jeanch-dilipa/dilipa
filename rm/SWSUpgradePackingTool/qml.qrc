@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>UpdateFileItem.qml</file>
+        <file>NormalButton.qml</file>
+        <file>UpdateFileListDialog.qml</file>
+        <file>ShowMessageDialog.qml</file>
+        <file>CustomTextField.qml</file>
+    </qresource>
+</RCC>
