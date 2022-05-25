@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Center</class>
+ <widget class="QWidget" name="Center">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>861</width>
+    <height>451</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="widget_5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>861</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="widget_11" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>180</y>
+      <width>861</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="progress_Widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>370</width>
+       <height>271</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>369</x>
+       <y>0</y>
+       <width>491</width>
+       <height>271</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_12" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>861</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="VP_Widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>215</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="AP_Widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>0</y>
+       <width>215</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="TEMP_Widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>0</y>
+       <width>215</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_17" native="true">
+     <property name="geometry">
+      <rect>
+       <x>645</x>
+       <y>0</y>
+       <width>215</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_13" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>171</y>
+      <width>861</width>
+      <height>8</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
