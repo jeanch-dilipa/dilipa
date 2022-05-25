@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/pick_down.png</file>
+        <file>src/pick_up.png</file>
+        <file>src/Rectangle_Ellipse.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>7za.dll</file>
+        <file>7za.exe</file>
+        <file>7zxa.dll</file>
+    </qresource>
+</RCC>

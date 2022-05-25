@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Debugmsg.qml</file>
+        <file>Propertydefine.qml</file>
+        <file>Therapeutic.qml</file>
+        <file>Messagepop_up.qml</file>
+    </qresource>
+</RCC>

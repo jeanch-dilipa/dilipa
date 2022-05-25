@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/paravane.ico</file>
+        <file>image/paravane.png</file>
+    </qresource>
+</RCC>
